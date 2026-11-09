@@ -1,0 +1,18 @@
+model:
+  path: yolo11n-pose.pt
+  confidence: 0.30
+  iou: 0.50
+  imgsz: 640
+  device: cpu
+fall:
+  floor_y_ratio: 0.90
+  fallen_aspect_ratio: 1.15
+  torso_angle_threshold: 55.0
+  fall_confirm_frames: 4
+  recover_confirm_frames: 8
+  min_keypoint_confidence: 0.20
+  alert_hold_seconds: 5.0
+video:
+  output_dir: outputs
+  draw_skeleton: true
+  draw_floor_line: true
